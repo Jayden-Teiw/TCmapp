@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload CSV</title>
+    <style>
+        body {
+            background-image: url('{{ url_for('static', filename='background.jpg') }}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h2 {
+            color: black;
+            text-align: center;
+        }
+
+        h3 {
+            color: black;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .form-container input[type="file"],
+        .form-container select,
+        .form-container input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .form-container button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .select-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .select-container div {
+            flex: 1;
+            margin-right: 10px;
+        }
+
+        .select-container div:last-child {
+            margin-right: 0;
+        }
+
+        .select-container select {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Upload CSV File</h2>
+
+    <div class="container">
+        <div class="form-container">
+            <h3>Monthly Upload</h3>
+            <form action="{{ url_for('upload_file') }}" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" id="file" placeholder="Select file" required>
+                <label for="case_type">Choose case type:</label>
+                <select name="case_type" id="case_type" required>
+                    <option value="CV">CV</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Rodent">Rodent</option>
+                    <option value="Seepage">Seepage</option>
+                    <option value="Roofleak">Roofleak</option>
+                    <option value="Lift">Lift</option>
+                </select>
+                <div class="select-container">
+                    <div>
+                        <label for="prefix">Select division:</label>
+                        <select name="prefix" id="prefix" required>
+                            {% for prefix in prefixes %}
+                            <option value="{{ prefix }}">{{ prefix }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="month">Select month:</label>
+                        <select name="month" id="month" required>
+                            <option value="JAN">JAN</option>
+                            <option value="FEB">FEB</option>
+                            <option value="MAR">MAR</option>
+                            <option value="APR">APR</option>
+                            <option value="MAY">MAY</option>
+                            <option value="JUN">JUN</option>
+                            <option value="JUL">JUL</option>
+                            <option value="AUG">AUG</option>
+                            <option value="SEP">SEP</option>
+                            <option value="OCT">OCT</option>
+                            <option value="NOV">NOV</option>
+                            <option value="DEC">DEC</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="year">Select year:</label>
+                        <select name="year" id="year" required>
+                            {% for year in years %}
+                            <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <label for="min_count">Minimum count:</label>
+                <input type="number" name="min_count" id="min_count" required min="1" value="3">
+                <button type="submit">Upload</button>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <h3>View Existing Files</h3>
+            <form action="{{ url_for('view_existing_files') }}" method="post">
+                <label for="case_type_view">Choose case type:</label>
+                <select name="case_type_view" id="case_type_view" required>
+                    <option value="CV">CV</option>
+                    <option value="Bird">Bird</option>
+                    <option value="Rodent">Rodent</option>
+                    <option value="Seepage">Seepage</option>
+                    <option value="Roofleak">Roofleak</option>
+                </select>
+                <div class="select-container">
+                    <div>
+                        <label for="existing_prefix">Select division:</label>
+                        <select name="existing_prefix" id="existing_prefix" required>
+                            {% for prefix in prefixes %}
+                            <option value="{{ prefix }}">{{ prefix }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="existing_month">Select month:</label>
+                        <select name="existing_month" id="existing_month" required>
+                            <option value="JAN">JAN</option>
+                            <option value="FEB">FEB</option>
+                            <option value="MAR">MAR</option>
+                            <option value="APR">APR</option>
+                            <option value="MAY">MAY</option>
+                            <option value="JUN">JUN</option>
+                            <option value="JUL">JUL</option>
+                            <option value="AUG">AUG</option>
+                            <option value="SEP">SEP</option>
+                            <option value="OCT">OCT</option>
+                            <option value="NOV">NOV</option>
+                            <option value="DEC">DEC</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="existing_year">Select year:</label>
+                        <select name="existing_year" id="existing_year" required>
+                            {% for year in years %}
+                            <option value="{{ year }}">{{ year }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+                <button type="submit">View File</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

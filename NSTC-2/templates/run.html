@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run Bubbleplot</title>
+    <script>
+        function showLoadingMessage() {
+            document.getElementById('loading-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <h2>Run Bubbleplot</h2>
+    <form action="{{ url_for('run_bubbleplot') }}" method="post" onsubmit="showLoadingMessage()">
+        <input type="hidden" name="filename" value="{{ filename }}">
+        <input type="hidden" name="prefix" value="{{ prefix }}">
+        <input type="hidden" name="month" value="{{ month }}">
+        <input type="hidden" name="year" value="{{ year }}">
+        <input type="hidden" name="min_count" value="{{ min_count }}">
+        <input type="submit" value="Generate Bubbleplot">
+    </form>
+    <p id="loading-message" style="display: none;">Generating bubble plot for {{ filename }}... This might take a moment. Please wait...</p>
+</body>
+</html>
+

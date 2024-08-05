@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e98443d29f04890e6f618bf353d67215 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+     
+        <div style="position: fixed; 
+                    bottom: 50px; left: 50px; width: 130px; height: 180px; 
+                    background-color: white; z-index:9999; font-size:12px; 
+                    border:2px solid grey; border-radius:6px; 
+                    "> 
+
+        &nbsp; <b>CP APR 2024</b> <br> 
+        &nbsp; <br> 
+        &nbsp; <b>Legend</b> <br> 
+        &nbsp; <i class="fa fa-circle" style="color:red"></i>&nbsp; > 4 cases <br> 
+        &nbsp; <i class="fa fa-circle" style="color:blue"></i>&nbsp; 3 or  4 cases <br> 
+        <br> 
+        &nbsp; <b>Statistics</b> <br> 
+        &nbsp; Mean Count: 2.90 <br> 
+        &nbsp; Median Count: 2.0 <br> 
+        &nbsp; Mode Count: 1 <br> 
+
+        </div> 
+
+    
+    
+            <div class="folium-map" id="map_e98443d29f04890e6f618bf353d67215" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e98443d29f04890e6f618bf353d67215 = L.map(
+                "map_e98443d29f04890e6f618bf353d67215",
+                {
+                    center: [1.4336331, 103.8352494],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 16,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_619deeae0892608712024198045b9b62 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_619deeae0892608712024198045b9b62.addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var circle_marker_cac9d99529002190750e8f663fc444f1 = L.circleMarker(
+                [1.43739545335207, 103.831939137109],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 90.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_cac9d99529002190750e8f663fc444f1.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760174</b><br> Cases:<b> 30</b><br> Block:<b> 174 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0b9ed97574a21fcf9af3857104a12ca4 = L.marker(
+                [1.43749545335207, 103.831839137109],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_5fc10e21afdb6d570e916edfdcfad0a3 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e174 \u003c/b\u003e\u003c/div\u003e"});
+            marker_0b9ed97574a21fcf9af3857104a12ca4.setIcon(div_icon_5fc10e21afdb6d570e916edfdcfad0a3);
+        
+    
+            var circle_marker_1b7ea5fa626f5f355d6e52faa7ec9adc = L.circleMarker(
+                [1.43413792566359, 103.827020312888],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 33.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_1b7ea5fa626f5f355d6e52faa7ec9adc.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760114</b><br> Cases:<b> 11</b><br> Block:<b> 114 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_eeec3d6781fc9632967d2420f4a4210d = L.marker(
+                [1.43423792566359, 103.82692031288799],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_6be7f9a9d007dc617ae1d1dd19b11e11 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e114 \u003c/b\u003e\u003c/div\u003e"});
+            marker_eeec3d6781fc9632967d2420f4a4210d.setIcon(div_icon_6be7f9a9d007dc617ae1d1dd19b11e11);
+        
+    
+            var circle_marker_cbe045970b8dbf6cde1a8328f5ea65a8 = L.circleMarker(
+                [1.43305540741239, 103.832397917463],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_cbe045970b8dbf6cde1a8328f5ea65a8.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760162</b><br> Cases:<b> 10</b><br> Block:<b> 162 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d8e273bb8816af7bf882b7af6e4e9278 = L.marker(
+                [1.43315540741239, 103.832297917463],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_c02073f5033359b25fc3df4dde338fde = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e162 \u003c/b\u003e\u003c/div\u003e"});
+            marker_d8e273bb8816af7bf882b7af6e4e9278.setIcon(div_icon_c02073f5033359b25fc3df4dde338fde);
+        
+    
+            var circle_marker_e7f12243d0fe1bff24807f124321a98f = L.circleMarker(
+                [1.43628386057838, 103.831606580876],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 30.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_e7f12243d0fe1bff24807f124321a98f.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760166</b><br> Cases:<b> 10</b><br> Block:<b> 166 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_92386095e9210dcb067dbc6792bf9369 = L.marker(
+                [1.43638386057838, 103.831506580876],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_ad9543feefe213df639249942a3a4800 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e166 \u003c/b\u003e\u003c/div\u003e"});
+            marker_92386095e9210dcb067dbc6792bf9369.setIcon(div_icon_ad9543feefe213df639249942a3a4800);
+        
+    
+            var circle_marker_1b7bc2652239aa35d496ac27f2a64740 = L.circleMarker(
+                [1.43188761932588, 103.833567756794],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 27.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_1b7bc2652239aa35d496ac27f2a64740.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760156</b><br> Cases:<b> 9</b><br> Block:<b> 156 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bcfc25459fabbe3b2ab314cc5b0768c6 = L.marker(
+                [1.43198761932588, 103.833467756794],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_d928b693f57b9067c8887e5333c0ae10 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e156 \u003c/b\u003e\u003c/div\u003e"});
+            marker_bcfc25459fabbe3b2ab314cc5b0768c6.setIcon(div_icon_d928b693f57b9067c8887e5333c0ae10);
+        
+    
+            var circle_marker_63f9e93586e0307ccad483a652fa3083 = L.circleMarker(
+                [1.43791843653816, 103.836994608643],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_63f9e93586e0307ccad483a652fa3083.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760277</b><br> Cases:<b> 7</b><br> Block:<b> 277 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_297c65ca6e1930fc92e3771f2b7c152d = L.marker(
+                [1.43801843653816, 103.836894608643],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_795d58985b13552aff0d167f06693b2f = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e277 \u003c/b\u003e\u003c/div\u003e"});
+            marker_297c65ca6e1930fc92e3771f2b7c152d.setIcon(div_icon_795d58985b13552aff0d167f06693b2f);
+        
+    
+            var circle_marker_d5d79d1a4c48b3d5425f9e8154b3462c = L.circleMarker(
+                [1.4374586662622, 103.839039880371],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_d5d79d1a4c48b3d5425f9e8154b3462c.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760274</b><br> Cases:<b> 5</b><br> Block:<b> 274 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_465ffe746ec4c93b84090ac69f59c4e7 = L.marker(
+                [1.4375586662622, 103.838939880371],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_dcc9d7f920b36a895a529504e246716e = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e274 \u003c/b\u003e\u003c/div\u003e"});
+            marker_465ffe746ec4c93b84090ac69f59c4e7.setIcon(div_icon_dcc9d7f920b36a895a529504e246716e);
+        
+    
+            var circle_marker_598c1979663132be5715241a05a0ffd2 = L.circleMarker(
+                [1.43147861432349, 103.827452004212],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_598c1979663132be5715241a05a0ffd2.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760106</b><br> Cases:<b> 5</b><br> Block:<b> 106 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_02d92874cfc2abcfd9ad96702b79a634 = L.marker(
+                [1.43157861432349, 103.827352004212],
+                {}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            var div_icon_1a36d1a07721db0b56d79a3e0663ad34 = L.divIcon({"className": "empty", "html": "\u003cdiv style=\u0027font-size: 10pt;\u0027\u003e\u003cb\u003e106 \u003c/b\u003e\u003c/div\u003e"});
+            marker_02d92874cfc2abcfd9ad96702b79a634.setIcon(div_icon_1a36d1a07721db0b56d79a3e0663ad34);
+        
+    
+            var circle_marker_ac1426de5a747cbd92a78c0fac211e08 = L.circleMarker(
+                [1.43837258876623, 103.837384298272],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_ac1426de5a747cbd92a78c0fac211e08.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760279</b><br> Cases:<b> 4</b><br> Block:<b> 279 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7b25524d839cef40a2f7dd2914e4b050 = L.circleMarker(
+                [1.4327862752601, 103.833132900961],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 12.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_7b25524d839cef40a2f7dd2914e4b050.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760161</b><br> Cases:<b> 4</b><br> Block:<b> 161 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0ecb36505b5af1b4b14145e025023e7e = L.circleMarker(
+                [1.4308063369681, 103.83426814362],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_0ecb36505b5af1b4b14145e025023e7e.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760151</b><br> Cases:<b> 3</b><br> Block:<b> 151 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0f0eab52289dc7726bcf21fbafceb377 = L.circleMarker(
+                [1.43352498091281, 103.831330838156],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_0f0eab52289dc7726bcf21fbafceb377.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760130</b><br> Cases:<b> 3</b><br> Block:<b> 130 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_879731c511d232351e765f9eb53c3530 = L.circleMarker(
+                [1.4305357538408, 103.827667722074],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_879731c511d232351e765f9eb53c3530.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760101</b><br> Cases:<b> 3</b><br> Block:<b> 101 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eaad7c81f3c872ce2aafc878cbcebb57 = L.circleMarker(
+                [1.43831415037996, 103.838226869973],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_eaad7c81f3c872ce2aafc878cbcebb57.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760278</b><br> Cases:<b> 3</b><br> Block:<b> 278 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c7e70092c72b3ad470c372366e64806e = L.circleMarker(
+                [1.43502750249052, 103.82813490143],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_c7e70092c72b3ad470c372366e64806e.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760116</b><br> Cases:<b> 3</b><br> Block:<b> 116 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3a663c580cee0eb138d9b0163ee9cb03 = L.circleMarker(
+                [1.43165616021317, 103.831319107107],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_3a663c580cee0eb138d9b0163ee9cb03.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760139</b><br> Cases:<b> 3</b><br> Block:<b> 139 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_849be62c5488baeb6c38d520bc66ff9b = L.circleMarker(
+                [1.43089700238255, 103.830000816371],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_849be62c5488baeb6c38d520bc66ff9b.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760141</b><br> Cases:<b> 3</b><br> Block:<b> 141 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2a1597fee9ba63bef1ba9f121348a96c = L.circleMarker(
+                [1.43339605588677, 103.82711777039],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_2a1597fee9ba63bef1ba9f121348a96c.bindTooltip(
+                `<div>
+                     Postal Code:<b> 762115</b><br> Cases:<b> 3</b><br> Block:<b> 115B</b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b24694adbb1b2cdd502509787210cc8f = L.circleMarker(
+                [1.43661282967317, 103.832356503845],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.3, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.0, "stroke": true, "weight": 3}
+            ).addTo(map_e98443d29f04890e6f618bf353d67215);
+        
+    
+            circle_marker_b24694adbb1b2cdd502509787210cc8f.bindTooltip(
+                `<div>
+                     Postal Code:<b> 760167</b><br> Cases:<b> 3</b><br> Block:<b> 167 </b>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
